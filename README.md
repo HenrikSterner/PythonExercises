@@ -7,7 +7,7 @@ Tryk på
 * Projekter i maskinelæring: Lidt større opgaver/projekter i klassiske algoritmer indenfor maskinelæring og kunstig intelligens. Inkluderer: 
   * [k-Nærmeste-Naboer](https://github.com/HenrikSterner/PythonExercises/blob/main/projects/ML_knn.md) 
   * [k-means](https://github.com/HenrikSterner/PythonExercises/blob/main/projects/ML_kmeans.md) 
-
+  * [Lineær Regression](https://github.com/HenrikSterner/PythonExercises/blob/main/projects/ML_LinReg.md) 
 God arbejdslyst.
 
 Mvh.
