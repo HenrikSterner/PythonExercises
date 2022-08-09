@@ -1,4 +1,4 @@
-# Klassifikation ved brug **K**-Nærmeste-Naboer algoritmen
+# Klassifikation ved brug **K**-means algoritmen
 Nærværende dokument beskriver et projekt, der vedrører en af de mest simple maskinelæringsalgoritmer kaldet K-means . Selvom den er relativt simpel, giver den et super godt indblik i hvad maskinelæring er og hvad det kan bruges til. 
 ## Del I: Forarbejde til K-means i 2D
 I det følgende er målet at implementere en visuel k-means algoritme, der altså segmenterer to sæt af punkter
