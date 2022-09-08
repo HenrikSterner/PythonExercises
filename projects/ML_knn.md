@@ -45,6 +45,7 @@ def prediction(xTrain,y,xInput,K):
         predLabels.append(stats.mode(labels)[0])
     return predLabels
 ```
+Den kræver at du har datasættet liggende. Tjek mappen på github kaldet data.
 
 
 ## Del 5: kNN i praksis 
@@ -52,12 +53,12 @@ Anvend kNN på mindst tre forskellige cases. For hver case skal der
 - 1. Afprøves mindst to forskellige distancemetrikker og 
 - 2. Plottes i matplotlib en graf med k fra 2 til 50 ud af x-aksen og den respektive accuracy score opad y-aksen for den respektive k-værdi. 
 
-I må gerne bruge den indbyggede knn - se nedenfor. 
+I må gerne bruge den indbyggede knn - se nedenfor. Den første case kunne passende være på MNIST datasættet, som ligger under Data på https://github.com/HenrikSterner/PythonExercises/ under projekter. 
 
 Herunder et eksempel på hvorledes man kan indlæse data og afvikle knn:
 ```python
 # Load data 
-path = "data/MNIST-5-6-Subset.txt"
+path = "data/MNIST-5-6-Subset.txt" #husk at ændre filnavn
 data = np.loadtxt(path,dtype = np.float64)
 data = data.reshape(1877,784)
 path = "data/MNIST-5-6-Subset-Labels.txt"
