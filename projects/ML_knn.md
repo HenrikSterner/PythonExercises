@@ -19,6 +19,7 @@ Følgende skal gøres:
 4. Lav en afstemning dvs. find ud af hvilken label der er flest af blandt de K udtagne punkter. 
 5. Farvelæg p ud fra dette 
 6. Udvid koden så den nu også kan inddrage punkter med flere forskellige labels.
+7. Konstruer en visualisering af valg af K. Hvor du har K ud af x-aksen og antal korrekte klassificeringer op ad y-aksen. Prøv den af i praksis. 
 
 ## Del 3: Forskellige distance metrikker
 
@@ -26,7 +27,7 @@ Indtil nu har vi kun gjort brug af den euklidiske distance.
 I det følgende skal implementeres mindst tre forskellige [distancefunktioner](https://towardsdatascience.com/9-distance-measures-in-data-science-918109d069fa). Tryk på linket for at få nogle eksempler på nogle af disse funktioner. Overvej styrker og svagheder ved disse.
 
 ## Del 4: Implementer kNN i numpy
-I denne øvelse skal du prøve at implementere kNN i numpy, hvis du har mod på det. Hvis du synes det er for svært, så prøv at forstå følgende kode og prøv den af i praksis:
+I denne øvelse skal du prøve at implementere kNN i numpy, hvis du har mod på det (dvs. helt frivillig men hvis du har tid til overs så kig på den). Hvis du synes det er for svært, så prøv at forstå følgende kode og prøv den af i praksis:
 
 ```python
 # Function computing Euclidean distance
