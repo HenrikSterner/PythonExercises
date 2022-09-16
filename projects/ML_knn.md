@@ -5,7 +5,7 @@ I det følgende er målet at implementere en visuel 1-NN, der altså klassificer
 
 1. Lav en class Point, der repræsenterer et punkt som  initialiseres et tilfældigt sted på skærmen og som har en label i form af en farve (rød/blå eller kat/hund…). Dette udgør mængden $$S=\{(x1,y1),…(xn,yn)\}$$
 2. Lav en liste af disse Point punkter og visualiser dem på skærmen med forskellige farver
-3. Generer nu et nyt punkt p, som du kender placering på men ikke kender klassen/ på
+3. Generer nu et nyt punkt p, som du kender placering på men ikke kender label/farve på. 
 4. Implementer en funktion 1NN, der finder det nærmest punkt og farvelæg p udfra samme farve som nærmeste nabo
 5. Udvid programmet, så det ikke kun består af to farver men et vilkårligt antal.
 
