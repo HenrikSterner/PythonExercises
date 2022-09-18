@@ -9,7 +9,11 @@ Tryk på
   * [k-Nærmeste-Naboer](https://github.com/HenrikSterner/PythonExercises/blob/main/projects/ML_knn.md) 
   * [k-means](https://github.com/HenrikSterner/PythonExercises/blob/main/projects/ML_kmeans.md) 
   * [Lineær Regression](https://github.com/HenrikSterner/PythonExercises/blob/main/projects/ML_LinReg.md) 
+  * [Naive Bayes](https://github.com/HenrikSterner/PythonExercises/blob/main/projects/ML_bayesformel.md) 
+
+
 God arbejdslyst.
+
 
 Mvh.
 Peter Sterner og Henrik Sterner 
