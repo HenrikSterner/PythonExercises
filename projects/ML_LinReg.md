@@ -41,4 +41,4 @@ Brug nu polynomiel regression på en selvvalgt case, som du synes kunne være in
 ## Perceptroner i to dimensioner
 I det følgende skal du forstå og implementere en simpel perceptron, som er en af de grundlæggende byggesten i neurale netværk. 
 Du skal følge guiden [http://iftek.dk/it-sikkerhed-perceptron-algoritmen] og lave en visuel repræsentation, hvor du generer et seperabelt datasæt som det første, og bagefter implementerer perceptronalgoritmen, så den finder en ret linje, der seperarer de to punktmængder. Det er fint bare at finde linjen, men man må også gerne illustrere hvorledes linjen justeres undervejs i algoritmen. 
-Det er vigtigt at blive bekendt og velfunderet i perceptroner, da de er centrale byggesten i neurale netværk. 
+Det er vigtigt at blive bekendt og velfunderet i perceptroner, da de er centrale byggesten i neurale netværk. Se evt. en P5.JS implementation ved at trykke på [https://editor.p5js.org/henrik.sterner/sketches/LhMDTMS7a]
