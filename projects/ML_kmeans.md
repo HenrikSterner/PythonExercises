@@ -48,8 +48,8 @@ Stop kun i et af følgende tre tilfælde:
 
 I denne del af opgaven skal I implementere og visualisere algoritmen i 2d. Alle tre stop-kritierier skal implementeres.
 
-## Del 3: Implementer k-means i numpy
-I denne øvelse skal du implementere k-means i numpy. Du skal stadig lave det fra bunden. 
+## Del 3: Implementer n-dimensional version af k-means i numpy
+I denne øvelse skal du implementere k-means i n-dimensioner i numpy. Du skal stadig lave det fra bunden. Opgaven er frivillig. Hvis du ikke ønsker at lave den bør du kigge på hvorledes man bruger den indbyggede version. Se evt. slides der illustrerer hvorledes k-means fra scikit kan kaldes. 
 
 ## Del 4: Hvor gode klynger får vi?
 Til at afgøre hvor gode klynger k-means konstruerer, bruges Dunn index og inertia.
