@@ -7,7 +7,12 @@ I det følgende er målet at implementere en visuel k-means algoritme, der alts�
 1. Lav en class Point, der repræsenterer et punkt som  initialiseres et tilfældigt sted på skærmen og som har en label i form af en farve (rød/blå eller kat/hund…). Dette udgør mængden $$S=\{(x1,y1),…(xn,yn)\}$$
 2. Lav en liste af disse Point punkter og visualiser dem på skærmen med forskellige farver
 3. Implementer en funktion der konstruerer nogle klynge lignende strukturer for hver unik label. Dvs. ensfarvet punkter bør være i samme klynge, men der kan godt forekomme overlap mellem klyngerne. Det kan gøres ved at bruge en tilfældighedsgenerator eller intervaller for punkterne. 
-4. Udvid funktionen i 3. så man kan specificere ud fra mindst tre niveauer hvor adskilte klyngerne skal være. 
+4. Udvid funktionen i 3. så man kan specificere ud fra mindst tre niveauer hvor adskilte klyngerne skal være. De tre niveauer kan inddeles eksempelvis i følgende:
+- Fuldstændig seperaret: Klynger "overlapper" på ingen måde med hinanden.
+- Delvist seperaret: Klynger "overlapper" delvist med hinanden. 
+- Overlapper: Klynger "overlapper" eller ligger oven i hinanden. 
+
+Ideen med opgaven er at I skal kunne prøve jeres algoritme af på de forskellige punktmængder.  
 
 Man kan evt prøve at bruge numpys `np.random.normal(loc=,scale=, size=)` til at generere punkter der er distribueret pænt. 
 Herunder et eksempel:
