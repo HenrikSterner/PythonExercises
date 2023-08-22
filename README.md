@@ -5,6 +5,8 @@ Tryk på
 * [Nybegynder Øvelser](https://github.com/HenrikSterner/PythonExercises/blob/main/exercises/easyexercises.ipynb): For folk der lige er startet op med at programmere.
 * [Middelsvære Øvelser](https://github.com/HenrikSterner/PythonExercises/blob/main/exercises/exercises.ipynb): En samling af mindre øvelser i grundlæggende programmering herunder sekvens-selektion-iteration paradigmet, funktioner og objekter. Tryk på linket  for at åbne jupyter-dokumentet med øvelserne. 
 * [Numpy øvelser](https://github.com/HenrikSterner/PythonExercises/blob/main/exercises/numpyexercises.ipynb)
+* [Matplotlib øvelser](https://github.com/HenrikSterner/PythonExercises/blob/main/exercises/streamlitexercises.ipynb)
+* [Streamlit øvelser](https://github.com/HenrikSterner/PythonExercises/blob/main/exercises/streamlitexercises.ipynb)
 * Projekter i maskinelæring: Lidt større opgaver/projekter i klassiske algoritmer indenfor maskinelæring og kunstig intelligens. Inkluderer: 
   * [k-Nærmeste-Naboer](https://github.com/HenrikSterner/PythonExercises/blob/main/projects/ML_knn.md) 
   * [k-means](https://github.com/HenrikSterner/PythonExercises/blob/main/projects/ML_kmeans.md) 
