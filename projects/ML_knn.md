@@ -19,7 +19,7 @@ Følgende skal gøres:
 4. Lav en afstemning dvs. find ud af hvilken label der er flest af blandt de K udtagne punkter. 
 5. Farvelæg p ud fra dette 
 6. Udvid koden så den nu også kan inddrage punkter med flere forskellige labels.
-7. Udvælg et virkeligt datasæt bestående af en kolonne med feauteres og 1 kolonne med mulighed for flere labels. Indlæs og afprøv din KNN algoritme på casen. 
+7. Udvælg et virkeligt datasæt bestående af to kolonne med feauteres og 1 kolonne med mulighed for flere labels. Indlæs og afprøv din KNN algoritme på casen. 
 8. Konstruer en visualisering af valg af K. Hvor du har K ud af x-aksen og antal korrekte klassificeringer op ad y-aksen. Prøv den af i praksis. 
 
 ## Del 3: Forskellige distance metrikker
@@ -57,6 +57,7 @@ Anvend kNN på mindst tre forskellige cases. For hver case skal der
 3. Afprøves KNN med mindst to forskellige distancemetrikker  
 4. Plottes i matplotlib en graf med k fra 2 til 50 ud af x-aksen og den respektive accuracy score opad y-aksen for den respektive k-værdi.
 5. Argumenter for valg af den optimale K. 
+6. Overvej hvorledes man kunne lave en vægtet KNN. Dvs. hvor man tager højde for at datapunkterne kan have forskellige vægte (i 2D kunne det illustreres med radier). Prøv at implementer det i praksis. (Frivillig opgave)
   
 ### Brug 
 I må gerne bruge den indbyggede knn - se nedenfor. I vælger selv cases men I kan lade jer inspirere af de datasæt i mine slides. 
