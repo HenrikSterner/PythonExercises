@@ -8,6 +8,33 @@ Til at starte med introduceres git og github med en række øvelser, der skal gi
 # Installation af git
 Git kan installeres på Windows, Mac og Linux. På Windows og Mac kan git installeres ved at downloade og køre en installationsfil. På Linux kan git installeres ved at køre en kommando i terminalen. Se [https://git-scm.com/downloads](https://git-scm.com/downloads) for at finde installationsfilerne til de forskellige platforme.
 
+Bemærk, at I skal bruge en terminal til at bruge git. Hvis I ikke ved noget om terminaler, så kig i næste slide og ellers spring den over.
+
+# Lidt om terminaler - del 1
+En terminal er et program, der gør det muligt at skrive kommandoer til computeren. På Windows er det f.eks. programmet "cmd" eller "powershell". På Mac er det programmet "terminal". På Linux er det programmet "terminal" eller "konsole".
+
+I Windows startes terminal ved at trykke på Windows-tasten og skrive "cmd" eller "powershell". I Mac startes terminal ved at trykke på "cmd" og "space" og skrive "terminal". I Linux startes terminal ved at trykke på "ctrl", "alt" og "t".
+
+# Navigere i terminalen
+I terminalen kan I navigere rundt i mapper og filer. I kan f.eks. skifte til en anden mappe ved at skrive "cd <mappe>". I kan også se, hvilken mappe I er i ved at skrive "pwd". I kan også se, hvilke filer og mapper der er i den mappe, I er i ved at skrive "dir" eller "ls".
+
+# Vigtige kommandoer i terminalen
+
+- cd: Skifter til en anden mappe. Eksempel: cd Documents
+- cd .. : Skifter til den mappe, der indeholder den mappe, I er i. Eksempel: cd ..
+- pwd: Viser, hvilken mappe I er i. Eksempel: pwd
+- dir: Viser, hvilke filer og mapper der er i den mappe, I er i. Eksempel: dir
+- ls: Viser, hvilke filer og mapper der er i den mappe, I er i. Eksempel: ls
+- mkdir: Opretter en mappe. Eksempel: mkdir Documents
+
+# Vigtige kommandoer i terminalen - del 2
+- rmdir: Sletter en mappe. Eksempel: rmdir Documents
+- touch: Opretter en fil. Eksempel: touch hello.py
+- rm: Sletter en fil. Eksempel: rm hello.py
+- mv: Flytter en fil. Eksempel: mv hello.py Documents
+- cp: Kopierer en fil. Eksempel: cp hello.py Documents
+
+
 # Opret en bruger på github
 For at kunne bruge github skal I oprette en bruger på www.github.com. Det er gratis at oprette en bruger. 
 
@@ -43,12 +70,7 @@ Nu skal I oprette et repository på jeres computer. Det repository skal I bruge 
 3. Opret en mappe til jeres kode. Det kan f.eks. være "gitintro".
 4. Skift til den mappe, der indeholder jeres kode. Det kan f.eks. være "gitintro".
 
-Hvis du ikke ved noget om terminaler så kig i næste slide og ellers spring den over.
 
-# Øvelse 2 fortsat: Lidt om terminaler
-En terminal er et program, der gør det muligt at skrive kommandoer til computeren. På Windows er det f.eks. programmet "cmd" eller "powershell". På Mac er det programmet "terminal". På Linux er det programmet "terminal" eller "konsole".
-
-I Windows startes terminal ved at trykke på Windows-tasten og skrive "cmd" eller "powershell". I Mac startes terminal ved at trykke på "cmd" og "space" og skrive "terminal". I Linux startes terminal ved at trykke på "ctrl", "alt" og "t".
 
 # Øvelse 2 fortsat: git init og git status
 Nu skal I oprette et repository i den mappe, I har oprettet til jeres kode. I skal bruge kommandoen `git init` til at oprette et repository. I skal også bruge kommandoen `git status` til at se status for jeres repository.
@@ -131,6 +153,8 @@ Nu skal I pushe jeres ændringer til github. Det betyder, at I skal "uploade" je
 1. Kør kommandoen `git push`. Denne kommando pushe jeres ændringer til github. I skal muligvis skrive jeres brugernavn og password til github. I skal også muligvis skrive `git push --set-upstream origin master` i stedet for `git push`.
 2. Kør kommandoen `git status`. I skulle gerne se, at der ikke er nogle ændringer i jeres kode.
 3. Gå ind på jeres repository på github. I skulle gerne se, at jeres ændringer er blevet tilføjet til jeres repository på github.
+
+# Øvelse 7 fortsat: git diff og git log
 4. Kør kommandoen `git log --oneline`. I skulle gerne se, at der er lavet et commit. I skulle også gerne se, hvem der har lavet commit'et og hvornår det er lavet. I skulle også gerne se, at der er en hash for commit'et. I skulle også gerne se, at der er en pil, der peger på commit'et. Pilen viser, at commit'et er det nyeste commit.
 
 # Opsummering indtil videre
@@ -145,7 +169,6 @@ I har lært:
 - Hvordan I laver ændringer i jeres fil
 - Hvordan I pusher jeres ændringer til github
 - Hvordan I ser, hvilke ændringer I har lavet i jeres fil
-
 - Hvordan I ser, hvilke ændringer der er lavet siden sidste commit
 
 # Vigtige begreber
@@ -195,6 +218,8 @@ Nu skal I lave en gren af jeres kode. Det betyder, at I skal lave en kopi af jer
 1. Kør kommandoen `git branch <navn>`. Denne kommando laver en gren af jeres kode. I skal erstatte `<navn>` med navnet på jeres gren. Det kan f.eks. være "test".
 2. Kør kommandoen `git branch -v`. Denne kommando viser, hvilke grene der er i jeres repository.
 3. Kør kommandoen `git status`. I skulle gerne se, at der ikke er nogle ændringer i jeres kode.
+
+# Øvelse 11 fortsat: Lav en gren af jeres kode
 4. Kør kommandoen `git graph`. I skulle gerne se, at der er lavet et commit. I skulle også gerne se, hvem der har lavet commit'et og hvornår det er lavet. I skulle også gerne se, at der er en hash for commit'et. I skulle også gerne se, at der er en pil, der peger på commit'et. Pilen viser, at commit'et er det nyeste commit.
 5. Kør kommandoen `git checkout <navn>`. Denne kommando skifter til jeres gren. I skal erstatte `<navn>` med navnet på jeres gren. Det kan f.eks. være "test".
 
@@ -218,8 +243,7 @@ Nu skal I merge jeres gren med master grenen. Det betyder, at I skal tilføje je
 8. Kør kommandoen `git status`. I skulle gerne se, at der ikke er nogle ændringer i jeres kode.
 9.  Kør kommandoen `git graph`. I skulle gerne se, at der er lavet et commit. I skulle også gerne se, hvem der har lavet commit'et og hvornår det er lavet. I skulle også gerne se, at der er en hash for commit'et. I skulle også gerne se, at der er en pil, der peger på commit'et. Pilen viser, at commit'et er det nyeste commit.
 
-# Opsummering indtil videre
-I har lært:
+# Opsummering: I har lært
 - Hvordan I laver en klon af jeres repository
 - Hvordan I går tilbage til en tidligere version af jeres kode
 - Hvordan I går tilbage til den nyeste version af jeres kode
@@ -229,8 +253,6 @@ I har lært:
 - Hvordan I skifter mellem grene
 - Hvordan I ser, hvilke ændringer der er lavet siden sidste commit
 - Hvordan I ser, hvilke ændringer der er lavet siden en bestemt version
-- Hvordan I ser, hvilke ændringer der er lavet af en bestemt person
-- Hvordan I ser, hvilke ændringer der er lavet i en bestemt fil
 
 # Vigtige begreber
 - Gren: En kopi af jeres kode. Det er git branch, der laver en gren.
@@ -300,6 +322,8 @@ Git workflow er en måde at bruge git på. Der er mange forskellige måder at br
 I kan også bruge git til vs code eller Github desktop. Det er programmer, der gør det nemt at bruge git. I kan finde vs code på [https://code.visualstudio.com/](https://code.visualstudio.com/) og Github desktop på [https://desktop.github.com/](https://desktop.github.com/).
 
 # Tak for jeres opmærksomhed
+
+Skriv til mig på hst@nextkbh.dk hvis I har spørgsmål eller kommentarer til dette forløb
 
 
 
