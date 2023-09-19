@@ -3,11 +3,12 @@ Nærværende dokument beskriver et projekt, der vedrører en af de mest simple m
 ## Del I: 1-NN i 2D
 I det følgende er målet at implementere en visuel 1-NN, der altså klassificerer et nyt punkt efter sin nærmeste nabo.
 
-1. Lav en class Point, der repræsenterer et punkt som  initialiseres et tilfældigt sted på skærmen og som har en label i form af en farve (rød/blå eller kat/hund…). Dette udgør mængden $$S=\{(x1,y1),…(xn,yn)\}$$
-2. Lav en liste af disse Point punkter og visualiser dem på skærmen med forskellige farver
-3. Generer nu et nyt punkt p, som du kender placering på men ikke kender label/farve på. 
-4. Implementer en funktion 1NN, der finder det nærmest punkt og farvelæg p udfra samme farve som nærmeste nabo
-5. Udvid programmet, så det ikke kun består af to farver men et vilkårligt antal.
+Start med at lave en funktion, der givet n som input genererer n rækker af tre kolonner. De to første kolonner skal være x og y koordinater og den tredje kolonne skal være en label også i form af et tal. Til at starte med kan I nøjes med to labels (0 for rød 1 for blå). 
+
+1. Lav en liste af disse punkter og visualiser dem på skærmen med forskellige farver
+2. Generer nu et nyt punkt p, som du kender placering på men ikke kender label/farve på. 
+3. Implementer en funktion 1NN, der finder det nærmest punkt og farvelæg p udfra samme farve som nærmeste nabo
+4. Udvid programmet, så det ikke kun består af to farver men et vilkårligt antal.
 
 ## Del 2: k-NN i 2D
 
@@ -24,8 +25,36 @@ Følgende skal gøres:
 
 ## Del 3: Forskellige distance metrikker
 
-Indtil nu har vi kun gjort brug af den euklidiske distance. 
-I det følgende skal implementeres mindst tre forskellige [distancefunktioner](https://towardsdatascience.com/9-distance-measures-in-data-science-918109d069fa). Tryk på linket for at få nogle eksempler på nogle af disse funktioner. Overvej styrker og svagheder ved disse.
+Indtil nu har vi kun gjort brug af den euklidiske distance, som er defineret ved
+$$
+d(x,y) = \sqrt{\sum_{i=1}^n (x_i-y_i)^2}
+$$
+Hvor $x$ og $y$ er to vektorer med $n$ dimensioner.
+
+Der findes mange andre distancemetrikker. En af dem er Manhattan distancen, som er defineret ved
+$$
+d(x,y) = \sum_{i=1}^n |x_i-y_i|
+$$
+
+Et tredje eksempel er Minkowski distancen, som er en generalisering af de to ovenstående. Den er defineret ved:
+$$
+d(x,y) = \left(\sum_{i=1}^n |x_i-y_i|^p\right)^{1/p}
+$$
+Hvor $p$ er en parameter. Når $p=1$ får vi Manhattan distancen og når $p=2$ får vi euklidisk distancen.
+
+En anden metrik er Cosinus afstanden, som er defineret ved:
+$$
+d(x,y) = 1-\frac{x\cdot y}{||x||\cdot ||y||}
+$$
+
+1. Implementer de forskellige distancemetrikker i Python som funktioner. Herunder er den euklidiske distance givet som et eksempel.
+```python
+def euclidDistance(x1,x2):
+    return(np.sqrt(np.sum((x1-x2)**2)))
+```
+2. Afprøv de forskellige distancemetrikker på et datasæt og sammenlign resultaterne.
+
+
 
 ## Del 4: Implementer kNN i numpy
 I denne øvelse skal du prøve at implementere kNN i numpy, hvis du har mod på det (dvs. helt frivillig men hvis du har tid til overs så kig på den). Hvis du synes det er for svært, så prøv at forstå følgende kode og prøv den af i praksis:
@@ -58,75 +87,30 @@ Anvend kNN på mindst tre forskellige cases. For hver case skal der
 4. Plottes i matplotlib en graf med k fra 2 til 50 ud af x-aksen og den respektive accuracy score opad y-aksen for den respektive k-værdi.
 5. Argumenter for valg af den optimale K. 
 6. Overvej hvorledes man kunne lave en vægtet KNN. Dvs. hvor man tager højde for at datapunkterne kan have forskellige vægte (i 2D kunne det illustreres med radier). Prøv at implementer det i praksis. (Frivillig opgave)
-  
-### Brug 
+
+Eksempler på cases kan være mange. Man kan hente dem eksempelvis på kaggle.com. Hvis man ikke selv gider støve data op, så er det muligt at bruge datasæt fra scikit learn. Herunder en liste over nogle af de mest brugte i sci-kit:
+
+* [Iris](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_iris.html#sklearn.datasets.load_iris). Iris er et klassisk datasæt, som bruges til at illustrere maskinelæring. Det består af 150 rækker og 4 kolonner. De fire kolonner er længden og bredden af kronblad og sepal. Der er tre forskellige labels, som er tre forskellige typer af iris blomster.
+* [Digits](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_digits.html#sklearn.datasets.load_digits). Digits er et datasæt med 1797 rækker og 64 kolonner. De 64 kolonner er pixelværdierne for et 8x8 billede af en håndskrevet tal. Der er 10 forskellige labels, som er de 10 tal fra 0 til 9.
+* [Wine](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_wine.html#sklearn.datasets.load_wine). Wine er et datasæt med 178 rækker og 13 kolonner. De 13 kolonner er forskellige kemiske egenskaber vedrørende vin. Der er tre forskellige labels, som er tre forskellige typer af vin.
+* [Breast cancer](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_breast_cancer.html#sklearn.datasets.load_breast_cancer). Breast cancer er et datasæt med 569 rækker og 30 kolonner. De 30 kolonner er forskellige mål vedrørende brystkræft. Der er to forskellige labels, som er henholdsvis godartet og ondartet brystkræft.
+* [Boston](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_boston.html#sklearn.datasets.load_boston). Boston er et datasæt med 506 rækker og 13 kolonner. De 13 kolonner er forskellige mål vedrørende boligpriser i Boston. Der er kun én label, som er boligprisen.
+* [Diabetes](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_diabetes.html#sklearn.datasets.load_diabetes). Diabetes er et datasæt med 442 rækker og 10 kolonner. De 10 kolonner er forskellige mål vedrørende diabetes. Der er kun én label, som er en kvantitativ måling af sygdommens progression et år efter baseline.
+
+Herunder vises hvorledes iris kan indlæses og bruges:
+```python
+from sklearn.datasets import load_iris
+iris = load_iris()
+# Storing the data and labels into "X" and "y" varaibles
+X = iris.data
+y = iris.target
+```
+
 I må gerne bruge den indbyggede knn - se nedenfor. I vælger selv cases men I kan lade jer inspirere af de datasæt i mine slides. 
 
 Herunder et eksempel på hvorledes man kan indlæse data og afvikle knn først med scikits knn og bagefter med knn ovenfor. 
 
 ```python
-# Assigning features and label variables
-# First Feature
-weather=['Sunny','Sunny','Overcast','Rainy','Rainy','Rainy','Overcast','Sunny','Sunny',
-'Rainy','Sunny','Overcast','Overcast','Rainy']
-# Second Feature
-temp=['Hot','Hot','Hot','Mild','Cool','Cool','Cool','Mild','Cool','Mild','Mild','Mild','Hot','Mild']
-
-# Label or target varible
-play=['No','No','Yes','Yes','Yes','No','Yes','No','Yes','Yes','Yes','Yes','Yes','No']
-
-# Import LabelEncoder
-from sklearn import preprocessing
-#creating labelEncoder
-le = preprocessing.LabelEncoder()
-# Converting string labels into numbers.
-weather_encoded=le.fit_transform(weather)
-print(weather_encoded)
-#Overcast:0, Rainy:1, and Sunny:2.
-# printer [2 2 0 1 1 1 0 2 2 1 2 0 0 1]
-# converting string labels into numbers
-temp_encoded=le.fit_transform(temp)
-label=le.fit_transform(play)
-#combinig weather and temp into single listof tuples
-features=list(zip(weather_encoded,temp_encoded))
-from sklearn.neighbors import KNeighborsClassifier
-
-model = KNeighborsClassifier(n_neighbors=3)
-
-# Train the model using the training sets
-model.fit(features,label)
-
-#Predict Output
-predicted= model.predict([[0,2]]) # 0:Overcast, 2:Mild
-print(predicted)
-#printer 1
-```
-
-Herunder eksempel med den hjemmelavet knn:
-```python
-# Load data 
-path = "data/MNIST-5-6-Subset.txt" #husk at ændre filnavn
-data = np.loadtxt(path,dtype = np.float64)
-data = data.reshape(1125,784)
-path = "data/MNIST-5-6-Subset-Labels.txt"
-labels = np.loadtxt(path,dtype = np.int8)
-
-def generateImage(arr):
-    two_d = np.transpose((np.reshape(arr, (28, 28)) * 255).astype(np.uint8))
-    plt.imshow(two_d, interpolation='nearest')
-    return plt
-
-generateImage(data[0]).show() #show the first image
-
-xTrain = data[0:100]
-yTrain = labels[0:100]
-xTest = data[100:120]
-yTest = labels[100:120]
-yPred = prediction(xTrain,yTrain,xTest , 75)
-# Check accuracy
-accuracy_score(yTest, yPred)
-```
-
 Endelig også et eksempel hvor I bruger indbyggede datasæt (iris):
 ```python
 from sklearn.datasets import load_iris
@@ -160,3 +144,57 @@ Labels:
 * “0”: setosa
 * “1”: versicolor
 * “2”: virginica
+
+## Del 5: Finde den optimale K-værdi
+En vigtig del af KNN er at finde den optimale K-værdi. Dette kan gøres ved at plotte K-værdierne mod deres respektive scores. Dette kan gøres ved at bruge matplotlib. Herunder ses et eksempel på hvordan dette kan gøres. 
+
+```python
+import matplotlib.pyplot as plt
+# Making a list of K for KNN
+k_list = list(range(1,50,2))
+# Creating empty list for scores
+scores = []
+# Looping over different values of k for KNN
+for k in k_list:
+    knn = KNeighborsClassifier(n_neighbors=k)
+    knn.fit(X_train,y_train)
+    #Appending scores to empty list
+    scores.append(knn.score(X_test,y_test))
+# Plotting the results
+plt.plot(k_list,scores)
+plt.xlabel('Value of K for KNN')
+plt.ylabel('Testing Accuracy')
+plt.title('Accuracy scores for values of K of k-Nearest-Neighbors')
+plt.show()
+```
+Prøv at afprøve dette på jeres data. Gerne alle jeres cases. 
+
+## Del 6: Andre metoder til at finde den optimale K-værdi
+Der findes også andre metoder til at finde den optimale K-værdi. En af dem er GridSearchCV, som er en del af scikit-learn. Ideen med GridSearchCV er at lave et grid af forskellige hyperparametre og så finde den kombination af hyperparametre, som giver den bedste score.
+
+Herunder ses et eksempel på hvordan dette kan gøres. 
+
+```python
+from sklearn.model_selection import GridSearchCV
+# Making a list of K for KNN
+k_list = list(range(1,50,2))
+# Creating a dictionary with hyperparameters and possible values
+param_grid = dict(n_neighbors=k_list)
+# Instantiating the model
+knn = KNeighborsClassifier()
+# Instantiating the grid
+grid = GridSearchCV(knn, param_grid, cv=10, scoring='accuracy')
+# Fitting the model
+grid.fit(X,y)
+# Printing the optimal score and hyperparameters
+print(grid.best_score_)
+print(grid.best_params_)
+print(grid.best_estimator_)
+```
+
+Prøv at afprøve dette på jeres data. Gerne alle jeres cases.
+
+## Del 7: Præsentation af resultater
+Afslutningsvis skal I præsentere jeres resultater i plenum. 
+
+
