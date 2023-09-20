@@ -1,14 +1,39 @@
 # Klassifikation ved brug **K**-Nærmeste-Naboer algoritmen
+
+## Af Henrik Sterner (henrik.sterner@gmail.com)
+
 Nærværende dokument beskriver et projekt, der vedrører en af de mest simple maskinelæringsalgoritmer kaldet K-Nærmeste-Naboer eller bare KNN. Selvom den er relativt simpel, giver den et super godt indblik i hvad maskinelæring er og hvad det kan bruges til. 
-## Del I: 1-NN i 2D
+
+Har du probler med at læse formlerne i dette dokument kan du også hente dokumentet i [pdf](https://github.com/HenrikSterner/PythonExercises/blob/main/projects/ML_knn.pdf). 
+
+
+## Del I: Generering af data og 1-NN i 2D
 I det følgende er målet at implementere en visuel 1-NN, der altså klassificerer et nyt punkt efter sin nærmeste nabo.
 
-Start med at lave en funktion, der givet n som input genererer n rækker af tre kolonner. De to første kolonner skal være x og y koordinater og den tredje kolonne skal være en label også i form af et tal. Til at starte med kan I nøjes med to labels (0 for rød 1 for blå). 
+Start med at lave en funktion, der givet n som input genererer n rækker af tre kolonner. De to første kolonner skal være x og y koordinater og den tredje kolonne skal være en label også i form af et tal. Til at starte med kan I nøjes med to labels (0 for rød 1 for blå). Herunder formen for listen med koordinater i tabelformat:
+
+| x | y | label |
+|---|---|-------|
+| 4 | 2 | 0     |
+| 3 | 3 | 1     |
+| 2 | 4 | 0     |
+| .. | .. | ..     |
+
+Prøv at lave en funktion, der genererer en liste med koordinater og labels og returnerer et numpy array. Herunder et skelet til en sådan funktion:
+
+```python
+def generateData(n):
+    # skriv din kode her - n er antal rækker
+    return(np.array(data))
+```
+
 
 1. Lav en liste af disse punkter og visualiser dem på skærmen med forskellige farver
 2. Generer nu et nyt punkt p, som du kender placering på men ikke kender label/farve på. 
 3. Implementer en funktion 1NN, der finder det nærmest punkt og farvelæg p udfra samme farve som nærmeste nabo
 4. Udvid programmet, så det ikke kun består af to farver men et vilkårligt antal.
+5. Udvid programmet, så det kan håndtere max og min værdier for x og y. Dvs. at punkterne ikke kan ligge udenfor et bestemt område.
+
 
 ## Del 2: k-NN i 2D
 
@@ -63,7 +88,7 @@ I denne øvelse skal du prøve at implementere kNN i numpy, hvis du har mod på 
 # Function computing Euclidean distance
 def euclidDistance(x1,x2):
     return(np.sqrt(np.sum((x1-x2)**2)))
-# Function to calculate KNN
+    # Function to calculate KNN
 def prediction(xTrain,y,xInput,K):
     predLabels=[]
     for x in xInput:
@@ -145,7 +170,7 @@ Labels:
 * “1”: versicolor
 * “2”: virginica
 
-## Del 5: Finde den optimale K-værdi
+## Del 6: Finde den optimale K-værdi
 En vigtig del af KNN er at finde den optimale K-værdi. Dette kan gøres ved at plotte K-værdierne mod deres respektive scores. Dette kan gøres ved at bruge matplotlib. Herunder ses et eksempel på hvordan dette kan gøres. 
 
 ```python
@@ -169,7 +194,7 @@ plt.show()
 ```
 Prøv at afprøve dette på jeres data. Gerne alle jeres cases. 
 
-## Del 6: Andre metoder til at finde den optimale K-værdi
+## Del 7: Andre metoder til at finde den optimale K-værdi
 Der findes også andre metoder til at finde den optimale K-værdi. En af dem er GridSearchCV, som er en del af scikit-learn. Ideen med GridSearchCV er at lave et grid af forskellige hyperparametre og så finde den kombination af hyperparametre, som giver den bedste score.
 
 Herunder ses et eksempel på hvordan dette kan gøres. 
@@ -194,7 +219,7 @@ print(grid.best_estimator_)
 
 Prøv at afprøve dette på jeres data. Gerne alle jeres cases.
 
-## Del 7: Præsentation af resultater
+## Del 8: Præsentation af resultater
 Afslutningsvis skal I præsentere jeres resultater i plenum. 
 
 
