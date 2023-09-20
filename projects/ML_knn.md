@@ -1,10 +1,10 @@
-# Klassifikation ved brug **K**-Nærmeste-Naboer algoritmen
+# Klassifikation ved brug af **K**-Nærmeste-Naboer algoritmen
 
 ## Af Henrik Sterner (henrik.sterner@gmail.com)
 
 Nærværende dokument beskriver et projekt, der vedrører en af de mest simple maskinelæringsalgoritmer kaldet K-Nærmeste-Naboer eller bare KNN. Selvom den er relativt simpel, giver den et super godt indblik i hvad maskinelæring er og hvad det kan bruges til. 
 
-Har du probler med at læse formlerne i dette dokument kan du også hente dokumentet i [pdf](https://github.com/HenrikSterner/PythonExercises/blob/main/projects/ML_knn.pdf). 
+Har du problemer med at læse formlerne i dette dokument kan du også hente dokumentet i [pdf](https://github.com/HenrikSterner/PythonExercises/blob/main/projects/ML_knn.pdf). 
 
 
 ## Del I: Generering af data og 1-NN i 2D
